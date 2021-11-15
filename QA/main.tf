@@ -6,7 +6,7 @@ resource "aws_instance" "webserver" {
   key_name = "Windows"
   subnet_id = "subnet-8fb4d0f7"
   count = 1
-  security_groups = "Devops-linux"
+  security_groups = ["Devops-linux"]
   user_data = file("script.sh")
 
   tags = {
